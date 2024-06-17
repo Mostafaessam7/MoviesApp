@@ -131,3 +131,9 @@ main {
 
 
 }
+.tag.highlight{
+    background-color: red;
+}
+.no-results{
+    color:white;
+}
