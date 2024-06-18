@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-
 :root {
     --primary-color: #22254b;
     --secondary-color: #373b69;
@@ -15,7 +14,6 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
 }
-
 
 header {
     padding: 1rem;
