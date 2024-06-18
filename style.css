@@ -111,7 +111,7 @@ main {
     transform: translateY(0)
 }
 
-#tags{
+#tags {
     width: 80%;
     display: flex;
     flex-wrap: wrap;
@@ -120,7 +120,7 @@ main {
     margin: 10px auto;
 }
 
-.tag{
+.tag {
     color: white;
     padding: 10px 20px;
     background-color: #6699cc;
@@ -128,12 +128,38 @@ main {
     margin: 5px;
     display: inline-block;
     cursor: pointer;
-
-
 }
-.tag.highlight{
+
+.tag.highlight {
     background-color: red;
 }
-.no-results{
-    color:white;
+
+.no-results {
+    color: white;
+}
+
+.pagination {
+    display: flex;
+    margin: 10px 30px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.page {
+    padding: 20px;
+    cursor: pointer;
+}
+
+.page.disabled {
+    cursor: not-allowed;
+    color: grey;
+}
+
+.current {
+    padding: 10px 20px;
+    border-radius: 50%;
+    border: 5px solid orange;
+    font-size: 20px;
+    font-weight: 600;
 }
