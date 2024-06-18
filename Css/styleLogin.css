@@ -40,7 +40,7 @@ nav a img {
     width: 430px;
     padding: 60px;
     border-radius: 4px;
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(55, 59, 105, 0.75);
     transform: translate(-50%, -50%);
 
 }
@@ -63,7 +63,7 @@ form .form-control {
 .form-control input {
     height: 100%;
     width: 100%;
-    background: #333;
+    background: #51579b;
     outline: none;
     border: none;
     color: #fff;
@@ -74,7 +74,7 @@ form .form-control {
 
 .form-control input:is(:focus, :valid) {
     padding: 16 20px 0;
-    background: #444;
+    background: #51579b;
 
 }
 
@@ -132,7 +132,7 @@ form .form-help :where(label, a) {
     font-size: 0.9rem;
 }
 
-.form-wrapper :where(label, a) {
+.form-wrapper :where(label,p, a) {
     color: #b3b3b3;
 }
 
@@ -142,7 +142,7 @@ form .form-help :where(label, a) {
     }
 
     nav,
-    .form-wrapper {
+    .form-wrapper, .form-wrapper2 {
         padding: 20px;
     }
 
@@ -150,12 +150,79 @@ form .form-help :where(label, a) {
         width: 140px;
     }
 
-    .form-wrapper {
+    .form-wrapper, .form-wrapper2 {
         top: 43%;
         width: 100%;
     }
 
-    .form-wrapper form {
+    .form-wrapper form , .form-wrapper2 form{
         margin: 25px 0 40px;
     }
+}
+h1 ,h4,p{
+    color: #fff
+}
+
+.form-wrapper2{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 480px;
+    height: 100%;
+    padding: 65px;
+    border-radius: 4px;
+    background: rgba(55, 59, 105, 0.75);
+    transform: translate(-50%, -50%);
+}
+.form-wrapper2 form {
+    margin: 25px 0 65px;
+}
+.form-wrapper2 :where(label,p, a) {
+    color: #b3b3b3;
+}
+
+form .form-control2 {
+    position: relative;
+    height: 50px;
+    margin-bottom: 16px;
+}
+.form-control2 input {
+    height: 100%;
+    width: 100%;
+    background: #51579b;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 4px;
+    padding: 0 20px;
+}
+
+.form-control2 input:is(:focus, :valid) {
+    padding: 10 10px 0;
+    background: #51579b;
+
+}
+
+.form-control2 label {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    color: #8c8c8c;
+    pointer-events: none;
+    font-size: 1rem;
+    transform: translateY(-50%);
+    transition: all 0.1s ease;
+}
+
+.form-control2 input:is(:focus, :valid)~label {
+    font-size: 0.75rem;
+    transform: translateY(-130%);
+}
+form .form-terms {
+    display: flex;
+    justify-content: space-between;
+}
+form .form-terms :where(label, a) {
+    font-size: 0.9rem;
 }
