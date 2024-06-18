@@ -202,7 +202,7 @@ function getMovies(url) {
 function showMovies(data) {
   main.innerHTML = '';
   data.forEach((movie) => {
-    const { title, poster_path, vote_average, overview } = movie;
+    const { title, poster_path, vote_average, overview, id } = movie;
     const movieEl = document.createElement('div');
     movieEl.classList.add('movie');
     movieEl.innerHTML = `
@@ -219,11 +219,52 @@ function showMovies(data) {
             <div class="overview">
                 <h3>overview</h3>
                 ${overview};
+                <br/>
+                <button id="${id}" class = "know-more">Know More</button>
             </div>
         
         `;
     main.appendChild(movieEl);
+
+    document.getElementById(id).addEventListener('click', ()=>{
+      console.log(id);
+      openNav(movie);
+    })
   });
+}
+
+
+const overlayContent = document.getElementById('overlay-content');
+/* Open when someone clicks on the span element */
+function openNav(movie) {
+  let id = movie.id;
+  fetch(BASE_URL+'/movie/'+id+'/videos?'+API_KEY).then(res=> res.json()).then(videoData => {
+    console.log(videoData);
+    if(videoData){
+      document.getElementById("myNave").style.width="100%"
+      if(videoData.results.length > 0){
+        var embed = [];
+        videoData.results.forEach(video => {
+          let {name, key, site} = video;
+          if(site == 'YouTube'){
+            embed.push(`
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/${key}" title="${name}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              `)
+          }
+        })
+
+        overlayContent.innerHTML= embed.join('');
+      }else {
+        overlayContent.innerHTML= `<h1 class = "no-result">No Results Found</h1>`
+      }
+    }
+  })
+  // document.getElementById("myNav").style.width = "100%";
+}
+
+/* Close when someone clicks on the "x" symbol inside the overlay */
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
 }
 
 function getColor(vote) {
