@@ -1,14 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h4,
+p {
+    color: #fff
 }
 
 body {
-    background: #22254b;
+    background-color: #22254b;
+    font-family: 'Poppins', sans-serif;
+
 }
 
 body::before {
@@ -19,7 +26,7 @@ body::before {
     width: 100%;
     height: 100%;
     opacity: 0.5;
-    background: url(../assets/Movies-background.webp);
+    background-image: url(../assets/Movies-background.webp);
     background-position: center;
 }
 
@@ -40,7 +47,7 @@ nav a img {
     width: 430px;
     padding: 60px;
     border-radius: 4px;
-    background: rgba(55, 59, 105, 0.75);
+    background-color: rgba(55, 59, 105, 0.75);
     transform: translate(-50%, -50%);
 
 }
@@ -50,11 +57,11 @@ nav a img {
     font-size: 2rem;
 }
 
-.form-wrapper form {
+.form-wrapper .form {
     margin: 25px 0 65px;
 }
 
-form .form-control {
+.form .form-control {
     position: relative;
     height: 50px;
     margin-bottom: 16px;
@@ -63,7 +70,7 @@ form .form-control {
 .form-control input {
     height: 100%;
     width: 100%;
-    background: #51579b;
+    background-color: #51579b;
     outline: none;
     border: none;
     color: #fff;
@@ -74,7 +81,7 @@ form .form-control {
 
 .form-control input:is(:focus, :valid) {
     padding: 16 20px 0;
-    background: #51579b;
+    background-color: #51579b;
 
 }
 
@@ -94,7 +101,7 @@ form .form-control {
     transform: translateY(-130%);
 }
 
-form button {
+.form button {
     width: 100%;
     padding: 16px 0;
     font-size: 1rem;
@@ -104,92 +111,68 @@ form button {
     cursor: pointer;
     font-weight: 500;
     border-radius: 4px;
-    background: #6699cc;
+    background-color: #6699cc;
     margin: 25px 0 10px;
     transition: 0.1s ease;
 }
 
-form button:hover {
-    background: #6699cc;
+.form button:hover {
+    background-color: #6699cc;
 
 }
 
-form .form-help {
+.form .form-help {
     display: flex;
     justify-content: space-between;
 }
 
-form .remember-me {
+.form .remember-me {
     display: flex;
 }
 
-form .remember-me input {
+.form .remember-me input {
     margin-right: 5px;
     accent-color: #b3b3b3;
 }
 
-form .form-help :where(label, a) {
+.form .form-help :where(label, a) {
     font-size: 0.9rem;
 }
 
-.form-wrapper :where(label,p, a) {
+.form-wrapper :where(label, p, a) {
     color: #b3b3b3;
 }
 
-@media(max-width: 740px) {
-    body::before {
-        display: none;
-    }
-
-    nav,
-    .form-wrapper, .form-wrapper2 {
-        padding: 20px;
-    }
-
-    nav a img {
-        width: 140px;
-    }
-
-    .form-wrapper, .form-wrapper2 {
-        top: 43%;
-        width: 100%;
-    }
-
-    .form-wrapper form , .form-wrapper2 form{
-        margin: 25px 0 40px;
-    }
-}
-h1 ,h4,p{
-    color: #fff
-}
-
-.form-wrapper2{
+.form-wrapper2 {
     position: absolute;
     left: 50%;
     top: 50%;
     width: 480px;
-    height: 100%;
+    /* height: 100%; */
     padding: 65px;
     border-radius: 4px;
-    background: rgba(55, 59, 105, 0.75);
+    background-color: rgba(55, 59, 105, 0.75);
     transform: translate(-50%, -50%);
 }
-.form-wrapper2 form {
+
+.form-wrapper2 .form {
     margin: 25px 0 65px;
 }
-.form-wrapper2 :where(label,p, a) {
+
+.form-wrapper2 :where(label, p, a) {
     color: #b3b3b3;
 }
 
-form .form-control2 {
+.form .form-control2 {
     position: relative;
     height: 50px;
     margin-bottom: 16px;
 }
+
 .form-control2 input {
     height: 100%;
     width: 100%;
-    background: #51579b;
+    background-color: #51579b;
     outline: none;
     border: none;
     color: #fff;
@@ -200,7 +183,7 @@ form .form-control2 {
 
 .form-control2 input:is(:focus, :valid) {
     padding: 10 10px 0;
-    background: #51579b;
+    background-color: #51579b;
 
 }
 
@@ -219,10 +202,51 @@ form .form-control2 {
     font-size: 0.75rem;
     transform: translateY(-130%);
 }
-form .form-terms {
+
+.form .form-terms {
     display: flex;
     justify-content: space-between;
 }
-form .form-terms :where(label, a) {
+
+.form .form-terms :where(label, a) {
     font-size: 0.9rem;
+}
+.existIdDanger
+{
+    color: red;
+    margin: 30px;
+}
+.existIdSuccess
+{
+    color: green;
+    margin: 30px;
+}
+
+
+
+@media(max-width: 740px) {
+    body::before {
+        display: none;
+    } 
+
+    nav,
+    .form-wrapper,
+    .form-wrapper2 {
+        padding: 20px;
+    }
+
+    nav a img {
+        width: 140px;
+    }
+
+    .form-wrapper,
+    .form-wrapper2 {
+        top: 43%;
+        width: 100%;
+    }
+
+    .form-wrapper .form,
+    .form-wrapper2 .form {
+        margin: 25px 0 40px;
+    }
 }
