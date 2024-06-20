@@ -54,6 +54,7 @@ function signUp() {
   } else {
     signUpArray.push(signUp);
     localStorage.setItem('users', JSON.stringify(signUpArray));
+    location.href = '/login.html';
     document.getElementById(
       'exist'
     ).innerHTML = `<span class="existIdSuccess">sucsess</span>`;
@@ -101,7 +102,7 @@ function login() {
       signUpArray[i].password.toLowerCase() == password.toLowerCase()
     ) {
       localStorage.setItem('recordUsername', signUpArray[i].name);
-      location.href = '/test.html';
+      location.href = '/index.html';
       document.getElementById(
         'incorrect'
       ).innerHTML = `<span class="existIdSuccess">Success</span>`;
@@ -122,5 +123,5 @@ function isLoginEmpty() {
 }
 
 function logout() {
-  localStorage.removeItem('sessionUsername');
+  localStorage.removeItem('recordUsername');
 }
