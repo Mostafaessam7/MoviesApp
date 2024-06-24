@@ -283,6 +283,7 @@ main {
     background-color: var(--primary-color);
     color: #7378c5;
     border: 2px solid transparent;
+    border-radius: 50px;
 }
 
 .button3:hover {
