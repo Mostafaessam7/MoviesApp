@@ -263,10 +263,15 @@ main {
 }
 
 .header-welcome {
-    font-size: large;
+    font-size:30px;
     font-style: italic;
+    font-weight: bold;
     color: #eee;
-    padding: 0 30px;
+    padding: 10px 30px;
+    border:transparent ;
+    border-radius:50px;
+    background-color: var(--primary-color);
+   
 }
 
 .button {
@@ -347,4 +352,8 @@ main {
 
 .dots .dot.active {
     border-color: orange;
+}
+
+#logout{
+    display: none;
 }

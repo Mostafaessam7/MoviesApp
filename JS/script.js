@@ -6,6 +6,8 @@ const API_URL = BASE_URL + '/discover/movie?sort_by=popularity.desc&'+API_KEY;
 const IMG_URL = 'https://image.tmdb.org/t/p/w500';
 const searchURL = BASE_URL + '/search/movie?'+API_KEY;
 
+
+
 const genres = [
     {
       "id": 28,
@@ -94,6 +96,10 @@ const icon = document.getElementById('search_icon');
 const prev = document.getElementById('prev')
 const next = document.getElementById('next')
 const current = document.getElementById('current')
+
+var username = localStorage.getItem('recordUsername');
+const btn_login=document.getElementById("login");
+const btn_logout=document.getElementById("logout");
 
 var currentPage = 1;
 var nextPage = 2;
@@ -407,4 +413,18 @@ function pageCall(page){
     let url = urlSplit[0] +'?'+ b
     getMovies(url);
   }
+}
+
+
+
+
+if(username){
+  btn_login.style.display="none";
+  btn_logout.style.display="block";
+
+}
+else{
+  btn_login.style.display="block";
+  btn_logout.style.display="none";
+
 }
