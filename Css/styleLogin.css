@@ -80,7 +80,7 @@ nav a img {
 }
 
 .form-control input:is(:focus, :valid) {
-    padding: 16 20px 0;
+    padding: 16px 20px 0;
     background-color: #51579b;
 
 }

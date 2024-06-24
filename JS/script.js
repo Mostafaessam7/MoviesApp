@@ -89,6 +89,7 @@ const main = document.getElementById('main');
 const form =  document.getElementById('form');
 const search = document.getElementById('search');
 const tagsEl = document.getElementById('tags');
+const icon = document.getElementById('search_icon');
 
 const prev = document.getElementById('prev')
 const next = document.getElementById('next')
@@ -361,6 +362,21 @@ form.addEventListener('submit', (e) => {
     }else{
         getMovies(API_URL);
     }
+
+})
+
+
+icon.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  const searchTerm = search.value;
+  selectedGenre=[];
+  setGenre();
+  if(searchTerm) {
+      getMovies(searchURL+'&query='+searchTerm)
+  }else{
+      getMovies(API_URL);
+  }
 
 })
 
