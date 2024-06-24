@@ -222,7 +222,7 @@ function showMovies(data) {
 
             <div class="movie-info">
                 <h3>${title}</h3>
-                <span class="${getColor(vote_average)}">${vote_average}</span>
+                <span class="${getColor(vote_average)}">${vote_average.toPrecision(2)}</span>
             </div>
 
             <div class="overview">
