@@ -92,6 +92,7 @@ const form =  document.getElementById('form');
 const search = document.getElementById('search');
 const tagsEl = document.getElementById('tags');
 const icon = document.getElementById('search_icon');
+// 
 
 const prev = document.getElementById('prev')
 const next = document.getElementById('next')
@@ -416,8 +417,6 @@ function pageCall(page){
 }
 
 
-
-
 if(username){
   btn_login.style.display="none";
   btn_logout.style.display="block";
@@ -428,3 +427,72 @@ else{
   btn_logout.style.display="none";
 
 }
+
+// form.addEventListener('submit', e=>{
+//   e.preventDefault();
+
+
+//   validateInputs();
+// })
+
+// const setError = (element, message)=>{
+//   const inputControl = element.parentElement
+//   const errorDisplay = inputControl.querySelector('.error')
+//   errorDisplay.innerText = message;
+//   inputControl.classList.add('error')
+//   inputControl.classList.remove('success')
+// }
+
+// const setSuccess = element => {
+//   const inputControl = element.parentElement;
+//   const errorDisplay = inputControl.querySelector('.error')
+//   errorDisplay.innerText = '';
+//   inputControl.classList.add('success')
+//   inputControl.classList.remove('error')
+// }
+
+// const isValidName = theName => {
+//   const reName = /^(?=.{6,}$)(?![.])(?!.*[.]{2})[a-zA-Z0-9.]+(?<![.])$/;
+//   return reName.test(String(theName).toLowerCase());
+// }
+// const isValidEmail = email => {
+//   const reEmail = /^\w+([.-]?\w+)@\w+([.-]?\w+)(\.\w{2,3})+$/;
+//   return reEmail.test(String(email).toLowerCase());
+// }
+// const isValidPassword = password => {
+//   const rePass =  /^(?=.\d)(?=.[a-zA-Z]).{4,8}$/;
+//   return rePass.test(String(password).toLowerCase());
+// }
+
+
+// const validateInputs = () => {
+//   const theNameValue = theName.value.trim();
+//   const emailValue = email.value.trim();
+//   const passwordValue = password.value.trim();
+  
+//   if(theNameValue===''){
+//     setError(theName, 'Name is required')
+//   }else if(!isValidName(theNameValue)){
+//     setError(theName, 'Provide a valid Name');
+//   }else{
+//     setSuccess(theName);
+//   }
+
+//   if(emailValue===''){
+//     setError(email, 'Email is required');
+//   } else if(!isValidEmail(emailValue)){
+//     setError(email, 'Provide a valid Email Address');
+//   } else {
+//     setSuccess(email);
+//   }
+
+//   if(passwordValue===''){
+//     setError(password, 'Password is required');
+//   } else if(!isValidPassword(passwordValue)){
+//     setError(password, 'Provide a valid Email Address');
+//   } else {
+//     setSuccess(password);
+//   }
+
+  
+// };

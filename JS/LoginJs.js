@@ -7,6 +7,86 @@ var signinPassword = document.getElementById('signinPassword');
 
 var signUpArray;
 
+// const theName = document.getElementById('signupName')
+// const email = document.getElementById('signupEmail')
+// const password = document.getElementById('signupPassword')
+// const form =  document.getElementById('form');
+
+// form.addEventListener('submit', e=>{
+//   e.preventDefault();
+
+
+//   validateInputs();
+// })
+
+
+
+
+
+const setError = (element, message)=>{
+  const inputControl = element.parentElement;
+  const errorDisplay = inputControl.querySelector('.error')
+  errorDisplay.innerText = message;
+  inputControl.classList.add('error')
+  inputControl.classList.remove('success')
+}
+
+const setSuccess = element => {
+  const inputControl = element.parentElement;
+  const errorDisplay = inputControl.querySelector('.error')
+  errorDisplay.innerText = '';
+  inputControl.classList.add('success')
+  inputControl.classList.remove('error')
+}
+
+const isValidName = theName => {
+  const reName = /^(?=.{6,}$)(?![.])(?!.*[.]{2})[a-zA-Z0-9.]+(?<![.])$/;
+  return reName.test(String(signupName).toLowerCase());
+}
+const isValidEmail = email => {
+  const reEmail = /^\w+([.-]?\w+)@\w+([.-]?\w+)(\.\w{2,3})+$/;
+  return reEmail.test(String(signupEmail).toLowerCase());
+}
+const isValidPassword = password => {
+  const rePass =  /^(?=.\d)(?=.[a-zA-Z]).{4,8}$/;
+  return rePass.test(String(signupPassword).toLowerCase());
+}
+
+
+const validateInputs = () => {
+  const theNameValue = signupName.value.trim();
+  const emailValue = signupEmail.value.trim();
+  const passwordValue = signupPassword.value.trim();
+  
+  if(theNameValue===''){
+    setError(signupName, 'Name is required')
+  }else if(!isValidName(theNameValue)){
+    setError(signupName, 'Provide a valid Name');
+  }else{
+    setSuccess(signupName);
+  }
+
+  if(emailValue===''){
+    setError(signupEmail, 'Email is required');
+  } else if(!isValidEmail(emailValue)){
+    setError(signupEmail, 'Provide a valid Email Address');
+  } else {
+    setSuccess(signupEmail);
+  }
+
+  if(passwordValue===''){
+    setError(signupPassword, 'Password is required');
+  } else if(!isValidPassword(passwordValue)){
+    setError(signupPassword, 'Provide a valid Email Address');
+  } else {
+    setSuccess(signupPassword);
+    
+  }
+
+  
+};
+
+
 var username = localStorage.getItem('recordUsername');
 
 if (username) {
@@ -30,22 +110,25 @@ function hasAccount() {
 
 function signUp() {
   if (isEmpty() == false) {
-    document.getElementById('exist').innerHTML =
-      '<span class="existIdDanger"> All inputs are required </span>';
-    return false;
+    // document.getElementById('exist').innerHTML =
+    //   '<span class="existIdDanger"> All inputs are required </span>';
+    
+    // return false;
+    return validateInputs();
   }
   var signUp = {
     name: signupName.value,
     email: signupEmail.value,
     password: signupPassword.value,
   };
-  if (signUpArray.length == 0) {
+  if (signUpArray.length == 0 && setSuccess()==true) {
     signUpArray.push(signUp);
     localStorage.setItem('users', JSON.stringify(signUpArray));
     document.getElementById(
       'exist'
     ).innerHTML = `<span class="existIdSuccess">sucsess</span>`;
     return true;
+    // return validateInputs();
   }
   if (isEmailExist() == false) {
     document.getElementById(
@@ -125,3 +208,11 @@ function isLoginEmpty() {
 function logout() {
   localStorage.removeItem('recordUsername');
 }
+
+
+
+
+
+
+
+

@@ -181,11 +181,12 @@ nav a img {
     padding: 0 20px;
 }
 
-.form-control2 input:is(:focus, :valid) {
+/* .form-control2 input:is(:focus, :valid) {
     padding: 10 10px 0;
     background-color: #51579b;
 
-}
+} */
+
 
 .form-control2 label {
     position: absolute;
@@ -194,14 +195,15 @@ nav a img {
     color: #8c8c8c;
     pointer-events: none;
     font-size: 1rem;
-    transform: translateY(-50%);
-    transition: all 0.1s ease;
+    transform: translateY(-130%);
+    font-size: 0.75rem;
+    /* transition: all 0.1s ease; */
 }
 
-.form-control2 input:is(:focus, :valid)~label {
+/* .form-control2 input:is(:focus, :valid)~label {
     font-size: 0.75rem;
     transform: translateY(-130%);
-}
+} */
 
 .form .form-terms {
     display: flex;
@@ -220,6 +222,14 @@ nav a img {
 {
     color: green;
     margin: 30px;
+}
+
+/* VALIDATION */
+
+.error {
+    color: red;
+    font-size: 9px;
+    height: 13px;
 }
 
 
