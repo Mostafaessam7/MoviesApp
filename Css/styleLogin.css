@@ -226,11 +226,22 @@ nav a img {
 
 /* VALIDATION */
 
-.error {
+#errorn {
     color: red;
     font-size: 9px;
     height: 13px;
 }
+#errore {
+    color: red;
+    font-size: 9px;
+    height: 13px;
+}
+#errorp {
+    color: red;
+    font-size: 9px;
+    height: 13px;
+}
+
 
 
 

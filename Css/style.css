@@ -71,7 +71,6 @@ main {
     overflow: hidden;
 }
 
-
 .movie img {
     width: 100%;
 }
@@ -268,8 +267,6 @@ main {
     font-style: italic;
     font-weight: bold;
     color: #eee;
-
-
 }
 
 .button {
@@ -293,7 +290,6 @@ main {
     background-color: #f44336;
     color: white;
 }
-
 
 .embed.hide {
     display: none;
