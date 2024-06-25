@@ -213,13 +213,13 @@ nav a img {
 .form .form-terms :where(label, a) {
     font-size: 0.9rem;
 }
-.existIdDanger
-{
+
+.existIdDanger {
     color: red;
     margin: 30px;
 }
-.existIdSuccess
-{
+
+.existIdSuccess {
     color: green;
     margin: 30px;
 }
@@ -237,7 +237,7 @@ nav a img {
 @media(max-width: 740px) {
     body::before {
         display: none;
-    } 
+    }
 
     nav,
     .form-wrapper,

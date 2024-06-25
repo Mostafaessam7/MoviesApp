@@ -2,53 +2,55 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="assets/movies icon.png" type="image/x-icon">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets/movies icon.png" type="image/x-icon" />
 
     <title>Sign Up</title>
-    <link rel="stylesheet" href="Css/styleLogin.css">
+    <link rel="stylesheet" href="Css/styleLogin.css" />
 </head>
 
 <body>
-
-    <span class="" style="display: none;" id="username"></span>
+    <span class="" style="display: none" id="username"></span>
 
     <div class="form-wrapper2">
         <h1>Sign Up</h1>
         <h4>It's free and only takes a minute</h4>
         <div class="form">
             <div class="form-control2">
-                <input type="text" id="signupName">
+                <input type="text" id="signupName" />
                 <label>Your Name </label>
                 <div class="error"></div>
             </div>
 
             <div class="form-control2">
-                <input type="text" id="signupEmail">
+                <input type="text" id="signupEmail" />
                 <label>Email Address</label>
                 <div class="error"></div>
             </div>
             <div class="form-control2">
-                <input type="password" id="signupPassword">
+                <input type="password" id="signupPassword" />
                 <label>Password</label>
                 <div class="error"></div>
             </div>
             <p id="exist"></p>
 
-            <button onclick="signUp()" type="submit">Sign Up</button>
+            <button onclick="signUp()" type="submit">
+                Sign Up
+            </button>
 
             <div class="form-terms">
-                <p>By clicking the sign up button,you agree to our
-                    <a href="#">Terms & Conditions</a> and <a href="#">Policy & Privacy</a>
+                <p>
+                    By clicking the sign up button,you agree to our
+                    <a href="#">Terms & Conditions</a> and
+                    <a href="#">Policy & Privacy</a>
                 </p>
             </div>
-            <br>
-            <p> Already have an account? <a href="login.html">Login here</a></p>
+            <br />
+            <p>Already have an account? <a href="login.html">Login here</a></p>
         </div>
     </div>
     <script src="JS/LoginJs.js"></script>
-
 </body>
 
 </html>

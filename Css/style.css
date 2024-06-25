@@ -43,15 +43,15 @@ header {
     text-align: center;
 }
 
-#search_icon{
+#search_icon {
     position: absolute;
     right: 215px;
     width: 20px;
-    background-color: transparent; 
-    border: none; 
-    margin: 15px 15px 15px 15px ; 
+    background-color: transparent;
+    border: none;
+    margin: 15px 15px 15px 15px;
     cursor: pointer;
-    justify-content:left;
+    justify-content: left;
     align-content: flex-start;
 }
 
@@ -264,12 +264,12 @@ main {
 }
 
 .header-welcome {
-    font-size:30px;
+    font-size: 30px;
     font-style: italic;
     font-weight: bold;
     color: #eee;
 
-   
+
 }
 
 .button {
@@ -339,7 +339,7 @@ main {
     border-color: orange;
 }
 
-#logout{
+#logout {
     display: none;
 }
 
